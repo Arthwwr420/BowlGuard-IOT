@@ -1,0 +1,297 @@
+/* General body styling */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: whitesmoke; /* Color de fondo claro por defecto */
+    color: black; /* Color de texto por defecto */
+}
+
+.no {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Header styling */
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 25px;
+
+    padding: 10px;
+    position: relative;
+    background-color: #BA2B45;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo {
+    margin-right: 5px;
+    max-width: 200px;
+}
+
+.letters {
+    max-width: 250px;
+}
+
+/* Menu icon styling */
+.btn-menu {
+    position: absolute;
+    right: 70px;
+    top: 40px;
+}
+
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: rotate(60deg);
+    transition: all 0.3s ease;
+}
+
+/* Menú contenedor */
+.container-menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: -100%; /* Fuera de la pantalla a la derecha */
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: +20;
+}
+
+/* Menú visible cuando se selecciona el checkbox */
+#btn-menu:checked ~ .container-menu {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+/* Contenido del menú */
+.cont-menu {
+    width: 250px;
+    height: 100vh;
+    background: #1c1c1c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Menu nav*/
+.cont-menu nav {
+    margin-top: 50px;
+}
+
+/* Enlaces dentro del menú */
+.cont-menu nav a {
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.cont-menu nav a:hover {
+    background: #BA2B45;
+    color: #1c1c1c;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Botón de cerrar (X) */
+.icon-out {
+    color: white;
+    position: absolute;
+    margin-bottom: 90px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Estilos para el panel de personalización */
+.personalization-options {
+    right: -100%;
+    top: 0;
+    background: #1c1c1c;
+    width: 250px;
+    height: 100vh;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    padding: 10px;
+    z-index: +40;
+}
+
+/* Personalización de los checkboxes con label */
+.personalization-options input {
+    display: none; /* Oculta los checkbox predeterminados */
+}
+
+.personalization-options .theme-option {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.personalization-options h3 {
+    margin-top: 20px;
+    font-size: 27px;
+}
+
+.personalization-options .theme-option input:checked + span {
+    background: #BA2B45;
+    color: #fff;
+    border-color: #BA2B45;
+}
+
+.personalization-options label {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.personalization-options .theme-option {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estilo al pasar el mouse */
+.personalization-options .theme-option:hover{
+    background: #BA2B45;
+    color: #1c1c1c;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+/* Botones de Bowls */
+.buttons {
+    margin-top: 60px;
+    width: 300px;
+    height: 400vh;
+    position: absolute;
+    left: 40px;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons h5 {
+    font-size: 40px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    color: #BA2B45; 
+}
+
+/* Estilo de los botones individuales */
+.buttons button {
+    background-color: #BA2B45;
+    color: white;
+    border: none;
+    padding: 15px 30px;  /* Aumento el padding para hacer los botones más grandes */
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 200px;  /* Aumento el ancho del botón */
+    font-size: 24px;  /* Aumento el tamaño del texto */
+}
+
+.buttons button:hover {
+    background-color: whitesmoke;
+    color: #BA2B45;
+    border: 1px solid #BA2B45;
+    transition: all 0.3s ease;
+    width: 220px;  /* Aumento el ancho cuando se pasa el mouse */
+    font-size: 28px;  /* Aumento el tamaño del texto al pasar el mouse */
+}
+
+
+/* contenido */
+.bowldatta {
+    background-color: #1d163f9f;
+    height: 100%;
+    width: 80%;
+    right: 40px;
+    top: 200px;
+    position: absolute;
+    z-index: -40;
+}
+
+.bowldatta h5 {
+    font-size: 60px;
+    margin-bottom: 5px;
+    margin-top: 25px;
+    margin-left: 20px;
+    z-index: -10;
+}
+
+.bowldatta img {
+    margin-top: -40px;
+}
+
+.bowldatta h3{
+    font-size: 230px;
+    margin-top: 80px;
+    margin-left: -50px;
+    margin-right: 170px;
+}
+
+.ha {
+    text-shadow: 3px 3px 0 black,
+    -3px 3px 0 black,
+    3px -3px 0 black,
+    -3px -3px 0 black,
+    0px 3px 0 black,
+    0px -3px 0 black,
+    -3px 0px 0 black,
+    3px 0px 0 black,
+    4px 4px 0 black,
+    -4px 4px 0 black,
+    4px -4px 0 black,
+    -4px -4px 0 black,
+    0px 4px 0 black,
+    0px -4px 0 black,
+    -4px 0px 0 black,
+    4px 0px 0 black,
+    3px 4px 0 black,
+    -3px 4px 0 black,
+    3px -4px 0 black,
+    -3px -4px 0 black,
+    4px 3px 0 black,
+    -4px 3px 0 black,
+    4px -3px 0 black,
+    -4px -3px 0 black;
+  }
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    background: #BA2B45;
+}
+
+.form-login{
+    width: 400px;
+    height: auto;
+    margin:auto;
+    margin-top: 90px;
+    box-shadow: 7px 13px 37px #1c043f;
+    padding: 20px 30px;
+    background: whitesmoke;
+}
+
+.form-login h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-bottom: 1px solid;
+    font-size: 30px;
+}
+
+.form-login h6 {
+    font-size: 17px;
+    margin-bottom: 0.5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.controls {
+    width: 100%;
+    border: 2px solid #BA2B45;
+    margin-bottom: 20px;
+    padding: 11px 10px;
+    background: #735d69b8;
+    border-radius: 10px;
+    font-size: 14px;
+    color: whitesmoke;
+    
+}
+
+.controls::placeholder{
+    color: rgb(236, 239, 242);
+}
+
+.controls:hover{
+    transition: all 0.3s ease;
+    background: #ba2b45ae;
+    color: whitesmoke;
+
+}
+
+.buttons{
+    width: 100%;
+    height: 40px;
+    background: #BA2B45;
+    border-radius: 20px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.buttons:hover {
+    text-align: center;
+    color: #BA2B45;
+    background-color: whitesmoke;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+}
+
+.form-login p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.form-login a {
+    color:#BA2B45;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-login a:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
